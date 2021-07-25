@@ -1,2 +1,2 @@
-# BashBilly
-I want to keep my knowlage about bash - TEST LINE
+# BashCmd
+Chcę tutaj trzymać mój proces uczenia się języka Bash
