@@ -1,63 +1,28 @@
-BASH (dorobić przykłady użycia)
-------------------
+BASH LEARNING
 
+------------------
+WOKING THROUGH FILES
 ls - list directory contents ||| -l, -lh, -la
 pwd - print name of current/working directory
 cd - change working directory ||| cd .. cofnij, ./ current location, ~/ home directory
-pushd/popd - put working directory on a stack
-file - determine file type ???
-locate - find files by name
-updatedb - update database for locate
-which - locate a command ???
-history - display bash command history
-
-GETTING HELP
-
-whatis - display the on-line manual descriptions
-apropos - search the manual page names and descriptions
-man - an interface to the on-line reference manuals
-
-WORKING WITH FILES
-
+------------------
+COPY-PASTE, MOVE, DELETE
 mkdir - create a directory/make directories
-touch - change file timestamps/create empty files
-cp - copy files and directories
-mv - move (rename) files ||| mv CurrentLocation NewLocation -> przenosi plik/pliki
-rm - remove files or directories ||| rm -r FileName -> usuwa folder z zawartością
 rmdir - remove empty directories
-
+cp - copy files and directories ||| mv CurrentLocation NewLocation
+mv - move (rename) files ||| mv CurrentLocation NewLocation -> przenosi plik/pliki
+mv ./OldName ./NewName - change name of the file
+rm - remove files or directories ||| rm -fr FileName -> usuwa folder z zawartością
+------------------
 TEXT FILES
-
-cat - concatenate files and print on the standard output
+touch - change file timestamps/create empty files
+cat - concatenate files and print on the standard output 
+echo "Some text" -> wyświetla napis w terminalu
+echo "Some text" >> textfile.txt -> dopisuje napis do pliku (uwaga: ">" nadpisuje plik!)
 more/less - file perusal filter for crt viewing
-nano - command line text editor
 
-USERS
-
-sudo - execute a command as superuser
-su - change user ID or become another user
-users - print the user names of users currently logged in
-id - print real and effective user and group IDs
-
-CHANGING FILE PERMISSIONS
-
-chmod - change permissions of a file ||| chmod -x myscript.sh -> executable
-
-KILLING PROGRAMS AND LOGGING OUT
-
-Ctrl+C - kill a running command
-killall - kill processes by name
-exit - log out of bash
-
-USEFUL SHORTCUTS
-
-Ctrl+D - signal bash that there is no more input
-Ctrl+L - redraw the screen
-Ctrl++ - make text bigger in terminal emulator
-Ctrl+- - make text smaller in terminal emulator
-
+------------------
 INFORMATION
-
 ifconfig -> network information
 ping [strona www] -> spr czy jest kontakt z tą stroną www
 ^C żeby skończyć
@@ -66,19 +31,56 @@ blkid -> info o hard drivie
 top -> pokazuje dziejące się obecnie procesy (wychodzimy naciskając Q)
 df -> disk space
 lsusb -> podpięte urządzenia
+pushd/popd - put working directory on a stack
+setxkbmap pl -> klawiatura Polska
+------------------
+USERS
+sudo - execute a command as superuser
+su - change user ID or become another user
+users - print the user names of users currently logged in
+id - print real and effective user and group IDs
+------------------
+KILLING PROGRAMS AND LOGGING OUT
+Ctrl+C - kill a running command
+killall - kill processes by name
+exit - log out of bash
+sudo shutdown 10 -> wyłącza system za 10 minut
+sudo shutdown -r now -> resetuje system teraz
+sudo shutdown -h -> hibernacja
 
+------------------
+GETTING HELP
+whatis - display the on-line manual descriptions (Linux)
+apropos - search the manual page names and descriptions (Linux)
+man - an interface to the on-line reference manuals (Win)
+file - determine file type ||| file FileName
+locate - find locations of a given file ||| locate question.sh -> pokazuje lokalizacje plików o takiej nazwie (Linux)
+updatedb - update database for locate
+which - locate a command ||| which cat -> /usr/bin/cat
+history - display bash command history
+
+------------------
+USEFUL SHORTCUTS
+Ctrl+D - signal bash that there is no more input
+Ctrl+L - redraw the screen
+Ctrl++ - make text bigger in terminal emulator
+Ctrl+- - make text smaller in terminal emulator
+------------------
 PACKAGE MANAGERS
-
 sudo apt-get install [nazwa pakietu] np. filezilla -> instaluje program, jeżeli jest dostępny
 sudo apt-get remove [nazwa] -> usuwa
 sudo apt-get update -> instaluje dostępne aktualizacje
 apt-get update && apt-get upgrade
 
-CONTROL
+------------------
+BASH PROGRAMMING
+każdy plik bash: 
+1) new file: nano myscript.sh
+2) always extension: .sh
+3) first line of code: #!/usr/bin/env bash
+4) change permissions of a file: chmod -x myscript.sh OR chmod 777 myscript.sh
+5) test: result jak true jest 0, a jak false to 1
 
-sudo shutdown 10 -> wyłącza system za 10 minut
-sudo shutdown -r now -> resetuje system teraz
-sudo shutdown -h -> hibernacja
 
 KOLORY
 
